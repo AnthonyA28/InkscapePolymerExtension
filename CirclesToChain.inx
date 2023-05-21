@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<inkscape-extension xmlns="http://www.inkscape.org/namespace/inkscape/extension">
+    <name>Circles To Chain</name>
+    <id>Arrowood.Polymer</id>
+    <param name="tab" type="notebook">
+        
+        <page name="scaling" gui-text="Options">
+            <label>            </label>
+            <label appearance="header">Text options</label>
+            <param name="CircleRadius" type="float" precision="2" min="0" max="100"
+                gui-text="Circle radius">8</param>  
+            
+            <param 
+                name="CircleStrokeWidth" 
+                type="float" 
+                precision="2" 
+                min="0" 
+                max="100"
+                gui-text="CircleStrokeWidth"
+            >
+            1
+            </param>  
+            <param 
+                name="DistBetweenCircles" 
+                type="float" 
+                precision="2" 
+                min="0" 
+                max="100"
+                gui-text="DistBetweenCircles"
+            >
+            8
+            </param>  
+
+            <param 
+                name="CircleRadiusVariation" 
+                type="float" 
+                precision="2" 
+                min="0" 
+                max="100"
+                gui-text="CircleRadiusVariation"
+            >
+            1
+            </param>  
+
+            <param 
+                name="wavelen" 
+                type="float" 
+                precision="2" 
+                min="0" 
+                max="100"
+                gui-text="wavelen"
+            >
+            80
+            </param>  
+            
+            <label>FillColor:</label>
+            <param 
+                name="FillColor"
+                type="color"
+                gui-text="FillColor"
+            >
+            </param>  
+            
+            <label>StrokeColor:</label>
+            <param 
+                name="StrokeColor" 
+                type="color"
+                gui-text="StrokeColor"
+            >
+            </param>  
+        
+        </page>
+    </param>
+
+    <effect needs-live-preview="false">
+        <!-- <object-type>text</object-type> -->
+        <effects-menu>
+            <submenu name="Polymer"/>
+        </effects-menu>
+    </effect>
+    <script>
+        <command location="inx" interpreter="python">CirclesToChain.py</command>
+    </script>
+</inkscape-extension>
