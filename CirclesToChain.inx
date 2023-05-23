@@ -6,7 +6,7 @@
         
         <page name="scaling" gui-text="Options">
             <label>            </label>
-            <label appearance="header">Text options</label>
+            <label appearance="header">Parameters</label>
             <param name="CircleRadius" type="float" precision="2" min="0" max="100"
                 gui-text="Circle radius">8</param>  
             
@@ -16,7 +16,7 @@
                 precision="2" 
                 min="0" 
                 max="100"
-                gui-text="CircleStrokeWidth"
+                gui-text="Circle stroke width"
             >
             1
             </param>  
@@ -26,7 +26,7 @@
                 precision="2" 
                 min="0" 
                 max="100"
-                gui-text="DistBetweenCircles"
+                gui-text="Distance between circles"
             >
             8
             </param>  
@@ -37,7 +37,7 @@
                 precision="2" 
                 min="0" 
                 max="100"
-                gui-text="CircleRadiusVariation"
+                gui-text="Circle radius variation"
             >
             1
             </param>  
@@ -48,12 +48,12 @@
                 precision="2" 
                 min="0" 
                 max="100"
-                gui-text="wavelen"
+                gui-text="Wavelength of radius variation"
             >
             80
             </param>  
             
-            <label>FillColor:</label>
+            <label>Fill color:</label>
             <param 
                 name="FillColor"
                 type="color"
@@ -61,7 +61,7 @@
             >
             </param>  
             
-            <label>StrokeColor:</label>
+            <label>Stroke color:</label>
             <param 
                 name="StrokeColor" 
                 type="color"

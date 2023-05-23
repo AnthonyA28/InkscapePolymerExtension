@@ -14,19 +14,15 @@ import re
 
 
 def inkscape_path_to_points(svg_content, l):
-    #     svg_content = f.read()
     
-    # path_data = re.findall(r'd="([^"]*)"', svg_content)
     points = []
     
-    # for data in path_data:
     segments = re.findall(r'([A-Za-z]|-?[0-9.]+)\s*', svg_content)
     i = 0
     last_point = (0.0, 0.0)
     
     while i < len(segments):
         segment = segments[i]
-        # inkex.utils.debug(segment)
 
         if segment in ['M', 'm', 'L', 'l']:
             dx = float(segments[i + 1])
@@ -153,7 +149,6 @@ class Chains(inkex.EffectExtension):
         pars.add_argument("--tab", help="The selected UI-tab when OK was pressed")
 
         
-        
 
     def effect(self):
 
@@ -168,13 +163,13 @@ class Chains(inkex.EffectExtension):
             selected_shapes.append(node)
 
         for node in selected_shapes:
+
+
             chainGroup = Group()
             str_node = node.get("d")
             points = inkscape_path_to_points(str_node, self.options.DistBetweenCircles/100)
-            # new_points = points 
             new_points = remove_close_points(points, self.options.DistBetweenCircles)
 
-            # print(r._inkscape_obj.path)
             total_distance =0 
             for i in range(0, len(new_points)):
                 
